@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        input{
+            width: 50%;
+        }
+        .form-group{
+            width: 50%;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-group mt-5 ">
+        Name :<input class="form-control m-3 border border-dark" type="text" id="name">
+        Id :<input class="form-control m-3 border border-dark" type="text" id="id">
+        Spi :<input class="form-control m-3 border border-dark " type="text" id="spi"> 
+    </div>
+    <button class="btn btn-outline-primary m-5 w-50 h-50" onclick="addStudent()" id="bt">ADD</button>
+    <div id="display"></div>
+    <script>
+         student = [
+  {
+    "name": "Eunice Cummings",
+    "spi": "7",
+    "id": "1"
+  },
+  {
+    "name": "Mr. Holly Homenick",
+    "spi": "4",
+    "id": "2"
+  },
+  {
+    "name": "Mr. Holly Homenick",
+    "spi": "4",
+    "id": "2"
+  },
+  {
+    "name": "Mr. Holly Homenick",
+    "spi": "4",
+    "id": "2"
+  },
+  {
+    "name": "Mr. Holly Homenick",
+    "spi": "4",
+    "id": "2"
+  },
+  {
+    "name": "Cory Kuhn",
+    "spi": "2",
+    "id": "3"
+  }
+];
+        idToEdit = -1;
+
+        function displayStudent(){
+        temp = document.getElementById("display");
+        tempString =""
+        tempString+="<table class='table table-striped table-secondry border border-black' >"
+        for( i=0 ; i<student.length; i++ ){
+            tempString+="<tr>"; 
+            tempString+="<td>"+student[i].name+"</td>";
+            tempString+="<td>"+student[i].spi+"</td>";
+            tempString+="<td>"+student[i].id+"</td>"; 
+            tempString += "<td><button class='btn btn-danger' onclick='deleteStudent("+i+")'>Delete</button></td>";
+			tempString += "<td><button class='btn btn-warning'onclick='setStudent("+i+")'>Edit</button></td>";
+            tempString+="</tr>";
+        }
+        tempString+="</table>";
+        temp.innerHTML = tempString;
+    }
+    displayStudent();
+
+    function setStudent(i){
+			idToEdit = i;
+			document.getElementById('name').value = student[i].name;
+            document.getElementById('id').value = student[i].id;
+            document.getElementById('spi').value = student[i].spi;
+            document.getElementById('bt').innerHTML = "Edit"
+            document.getElementById('bt').style.backgroundColor = yellow
+		}
+        function addStudent(){
+			tempObj = {
+				name: document.getElementById('name').value,
+				id: document.getElementById('id').value,
+				spi: document.getElementById('spi').value
+			}
+            if(idToEdit>=0){
+				student[idToEdit] = tempObj;
+                displayStudent();
+				idToEdit = -1;
+				document.getElementById('bt').innerHTML = "Add";
+                document.getElementById('name').value = "";
+                document.getElementById('id').value = "";
+                document.getElementById('spi').value = "";
+				}
+				else{
+					student.push(tempObj);	
+				}
+				
+				displayStudent();
+			}
+            function deleteStudent(i){
+            student.splice(i,1);	
+            displayStudent();    
+            }
+
+    </script>
+</body>
+</html>

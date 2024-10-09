@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        student = [
+  {
+    "createdAt": "2024-06-20T04:28:26.971Z",
+    "name": "Eunice Cummings",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/360.jpg",
+    "age": "8",
+    "spi": "7",
+    "id": "1"
+  },
+  {
+    "createdAt": "2024-06-20T00:02:10.681Z",
+    "name": "Mr. Holly Homenick",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/400.jpg",
+    "age": "7",
+    "spi": "4",
+    "id": "2"
+  },
+  {
+    "createdAt": "2024-06-20T06:03:09.327Z",
+    "name": "Cory Kuhn",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/406.jpg",
+    "age": "1",
+    "spi": "2",
+    "id": "3"
+  },
+  {
+    "createdAt": "2024-06-20T07:07:51.688Z",
+    "name": "Jennifer Littel",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/117.jpg",
+    "age": "1",
+    "spi": "9",
+    "id": "4"
+  },
+  {
+    "createdAt": "2024-06-19T16:56:52.588Z",
+    "name": "Mr. Jean Bauch",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/635.jpg",
+    "age": "3",
+    "spi": "6",
+    "id": "5"
+  },
+  {
+    "createdAt": "2024-06-19T22:24:59.833Z",
+    "name": "Ms. Jeremy Nicolas",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/26.jpg",
+    "age": "2",
+    "spi": "8",
+    "id": "6"
+  },
+  {
+    "createdAt": "2024-06-20T04:47:11.275Z",
+    "name": "Russell Cormier",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/797.jpg",
+    "age": "3",
+    "spi": "7",
+    "id": "7"
+  },
+  {
+    "createdAt": "2024-06-19T21:05:09.032Z",
+    "name": "Elaine Glover",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/534.jpg",
+    "age": "6",
+    "spi": "4",
+    "id": "8"
+  },
+  {
+    "createdAt": "2024-06-19T23:27:31.333Z",
+    "name": "Eddie Fritsch",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/345.jpg",
+    "age": "3",
+    "spi": "7",
+    "id": "9"
+  },
+  {
+    "createdAt": "2024-06-19T19:40:49.517Z",
+    "name": "Abel Windler IV",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1208.jpg",
+    "age": "5",
+    "spi": "5",
+    "id": "10"
+  },
+  {
+    "createdAt": "2024-06-19T12:03:14.815Z",
+    "name": "Darrin Krajcik",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/111.jpg",
+    "age": "5",
+    "spi": "6",
+    "id": "11"
+  },
+  {
+    "createdAt": "2024-06-20T04:29:41.305Z",
+    "name": "Shari Bayer",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/390.jpg",
+    "age": "1",
+    "spi": "6",
+    "id": "12"
+  },
+  {
+    "createdAt": "2024-06-19T21:08:35.649Z",
+    "name": "Myron Bartell",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/739.jpg",
+    "age": "6",
+    "spi": "1",
+    "id": "13"
+  },
+  {
+    "createdAt": "2024-06-19T10:27:42.136Z",
+    "name": "Crystal Von DDS",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/11.jpg",
+    "age": "8",
+    "spi": "8",
+    "id": "14"
+  },
+  {
+    "createdAt": "2024-06-20T00:20:32.944Z",
+    "name": "Elvira Hudson",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1083.jpg",
+    "age": "4",
+    "spi": "9",
+    "id": "15"
+  },
+  {
+    "createdAt": "2024-06-20T06:26:40.922Z",
+    "name": "Penny Johnston",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1247.jpg",
+    "age": "4",
+    "spi": "4",
+    "id": "16"
+  },
+  {
+    "createdAt": "2024-06-19T23:50:02.997Z",
+    "name": "Dr. Tiffany Hahn",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1019.jpg",
+    "age": "6",
+    "spi": "4",
+    "id": "17"
+  },
+  {
+    "createdAt": "2024-06-19T14:11:11.825Z",
+    "name": "Jo Trantow",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1114.jpg",
+    "age": "5",
+    "spi": "7",
+    "id": "18"
+  },
+  {
+    "createdAt": "2024-06-19T09:35:55.912Z",
+    "name": "Erma Raynor",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/463.jpg",
+    "age": "6",
+    "spi": "7",
+    "id": "19"
+  },
+  {
+    "createdAt": "2024-06-19T08:22:48.546Z",
+    "name": "Glenda Hoppe",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/659.jpg",
+    "age": "1",
+    "spi": "3",
+    "id": "20"
+  }
+]
+         document.write("<table class='table table-bordered border-dark' >");
+        for( i=0 ; i<student.length; i++ ){
+            document.write("<tr>");
+                document.write("<td>"+student[i].name+"</td>"); 
+                document.write("<td>"+"<img src="+student[i].avatar+">"+"</td>"); 
+                document.write("<td>"+student[i].age+"</td>"); 
+                document.write("<td>"+student[i].spi+"</td>");
+                document.write("<td>"+student[i].id+"</td>"); 
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

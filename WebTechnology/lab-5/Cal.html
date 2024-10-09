@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  <link rel="stylesheet" href="Cal.css">
+</head>
+<body>
+  <h1 >Graphical Calculator</h1>
+ <div id="sub">
+    <div id="icon">
+      <i class="bi bi-calculator"></i>&nbsp;&nbsp;&nbsp;
+      <i class="bi bi-clock-history"></i>
+    </div>
+    <input type="text" id="display" >
+    <table>
+      <tr>
+        <td><button type="button" value="7" onclick="appendValue(this.value)">7</button></td>
+        <td><button type="button" value="8" onclick="appendValue(this.value)">8</button></td>
+        <td><button type="button" value="9" onclick="appendValue(this.value)">9</button></td>
+        <td><button type="button" value="/" onclick="appendValue(this.value)">/</button></td>
+        <td><button type="button" onclick="backspace()"><i class="bi bi-arrow-left-circle-fill"></i></button></td>
+      </tr>
+      <tr>
+        <td><button type="button" value="4" onclick="appendValue(this.value)">4</button></td>
+        <td><button type="button" value="5" onclick="appendValue(this.value)">5</button></td>
+        <td><button type="button" value="6" onclick="appendValue(this.value)">6</button></td>
+        <td><button type="button" value="*" onclick="appendValue(this.value)">*</button></td>
+        <td><button type="button" value="%" onclick="appendValue(this.value)">%</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" value="1" onclick="appendValue(this.value)">1</button></td>
+        <td><button type="button" value="2" onclick="appendValue(this.value)">2</button></td>
+        <td><button type="button" value="3" onclick="appendValue(this.value)">3</button></td>
+        <td><button type="button" value="-" onclick="appendValue(this.value)">-</button></td>
+        <td><button type="button" value="," onclick="appendValue(this.value)">,</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" value="0" onclick="appendValue(this.value)">0</button></td>
+        <td><button type="button" value="." onclick="appendValue(this.value)">.</button></td>
+        <td><button type="button" value="=" onclick="calculate()">=</button></td>
+        <td><button type="button" value="+" onclick="appendValue(this.value)">+</button></td>
+        <td><button type="button" value="c" onclick="clearA()">c</button></td>
+      </tr>
+    </table>
+  </div>
+  <script >
+
+
+function appendValue(value) {
+  displayValue = document.getElementById('display');
+  displayValue.value += value;
+}
+
+function calculate() {
+    displayValue = document.getElementById('display');
+    final = eval(displayValue.value);
+    displayValue.value = final;
+}
+function clearA(){
+  displayValue = document.getElementById('display');
+  displayValue.value = " ";
+}
+function backspace(){
+  displayValue = document.getElementById('display');
+  displayValue.value = displayValue.value.slice(0,-1);
+ 
+}
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

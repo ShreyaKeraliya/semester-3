@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript that handles following mouse events Add necessary elements
+        If the mouse is over the heading should turn yellow and if the mouse goes out of the heading it should turn black.
+        If ƒindtime button is clicked show time and date information If button named “red” is clicked, background should change to red and If button named “green” is clicked, background should
+        change to green.</title>
+</head>
+
+<body>
+    <h1 id="heading">Welcome to JavaScript World!</h1>
+    <button id="indate">Show Time and Date</button>
+    <button id="red">Change Background to Red</button>
+    <button id="green">Change Background to Green</button>
+    
+    <script>
+        document.getElementById("heading").addEventListener("mouseover", function() {
+            this.style.color = "yellow";
+        });
+
+        document.getElementById("heading").addEventListener("mouseout", function() {
+            this.style.color = "black";
+        });
+
+        document.getElementById("indate").addEventListener("click", function() {
+            var currentDate = new Date();
+            alert("Current Date: " + currentDate.toDateString() + "\nCurrent Time: " + currentDate.toLocaleTimeString());
+        });
+
+        document.getElementById("red").addEventListener("click", function() {
+            document.body.style.backgroundColor = "red";
+        });
+
+        document.getElementById("green").addEventListener("click", function() {
+            document.body.style.backgroundColor = "green";
+        });
+    </script>
+    
+</body>
+
+</html>  

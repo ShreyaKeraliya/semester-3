@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WAP to recognize which mouse event is ƒired</title>
+</head>
+<body>
+    <button >click me</button>
+    <div id="div"></div>
+    <script>
+        document.addEventListener('click',() => display('click'));
+        document.addEventListener('mouseout',() => display('mouseout'));
+        document.addEventListener('mousemove',() => display('mousemove'));
+        document.addEventListener('dblclick',() => display('dblclick'));
+        document.addEventListener('contextmenu',() => display('contextmenu'));
+        document.addEventListener('wheel',() => display('wheel'));
+        document.addEventListener('keydown',() => display('keydown'));
+        document.addEventListener('keyup',() => display('keyup'));
+        document.addEventListener('keypress',() => display('keypress'));
+        document.addEventListener('mousedown',() => display('mousedown'));
+        document.addEventListener('mouseup',() => display('mouseup'));
+        document.addEventListener('mousemove',() => display('mousemove'));
+        document.addEventListener('mouseout',() => display('mouseout'));
+        function display(event){
+            document.getElementById('div').innerText=event;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script type="text/javascript">
+        let x=parseInt(prompt("Enter a digit"));
+        let y=parseInt(prompt("Enter a digit"));
+        let l=1;
+        if(x>y){
+        for(let i=1;i<=x;i++){
+
+            if(x%i==0 && y%i==0){
+                   if(i>l){
+                    l=i;
+                   }
+            }
+        }
+        document.write(l);
+       }
+       else{
+        for(i=1;i<=y;i++){
+            if(x%i==0 && y%i==0){
+                   if(i>l){
+                    l=i;
+                   }
+            }
+        }
+        document.write(l);
+       }
+
+    </script>
+</body>
+</html>

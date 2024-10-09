@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       product = [
+  {
+    "name": "Refined Metal Sausages",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/466.jpg",
+    "price": "800.00",
+    "id": "1"
+  },
+  {
+    "name": "Ergonomic Plastic Table",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/316.jpg",
+    "price": "971.00",
+    "id": "2"
+  },
+  {
+    "name": "Unbranded Rubber Fish",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/439.jpg",
+    "price": "50.00",
+    "id": "3"
+  },
+  {
+    "name": "Refined Cotton Bike",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/706.jpg",
+    "price": "1.00",
+    "id": "4"
+  },
+  {
+    "name": "Intelligent Granite Sausages",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/726.jpg",
+    "price": "520.00",
+    "id": "5"
+  },
+  {
+    "name": "Generic Steel Chips",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/546.jpg",
+    "price": "25.00",
+    "id": "6"
+  },
+  {
+    "name": "Ergonomic Cotton Ball",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/356.jpg",
+    "price": "797.00",
+    "id": "7"
+  },
+  {
+    "name": "Bespoke Concrete Fish",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/81.jpg",
+    "price": "859.00",
+    "id": "8"
+  },
+  {
+    "name": "Recycled Steel Sausages",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/555.jpg",
+    "price": "204.00",
+    "id": "9"
+  },
+  {
+    "name": "Luxurious Plastic Bike",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/651.jpg",
+    "price": "690.00",
+    "id": "10"
+  },
+  {
+    "name": "Awesome Bronze Soap",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/401.jpg",
+    "price": "301.00",
+    "id": "11"
+  },
+  {
+    "name": "Luxurious Steel Soap",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/363.jpg",
+    "price": "574.00",
+    "id": "12"
+  },
+  {
+    "name": "Small Steel Cheese",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1159.jpg",
+    "price": "679.00",
+    "id": "13"
+  },
+  {
+    "name": "Handmade Metal Bacon",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/370.jpg",
+    "price": "775.00",
+    "id": "14"
+  },
+  {
+    "name": "Elegant Metal Table",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/708.jpg",
+    "price": "386.00",
+    "id": "15"
+  },
+  {
+    "name": "Rustic Fresh Gloves",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg",
+    "price": "190.00",
+    "id": "16"
+  },
+  {
+    "name": "Tasty Concrete Tuna",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/824.jpg",
+    "price": "95.00",
+    "id": "17"
+  },
+  {
+    "name": "Oriental Cotton Computer",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1030.jpg",
+    "price": "375.00",
+    "id": "18"
+  },
+  {
+    "name": "Fantastic Plastic Keyboard",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/338.jpg",
+    "price": "61.00",
+    "id": "19"
+  },
+  {
+    "name": "Oriental Soft Tuna",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/672.jpg",
+    "price": "985.00",
+    "id": "20"
+  },
+  {
+    "name": "Oriental Wooden Ball",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/886.jpg",
+    "price": "981.00",
+    "id": "21"
+  },
+  {
+    "name": "Sleek Fresh Soap",
+    "productPhoto": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1179.jpg",
+    "price": "271.00",
+    "id": "22"
+  }
+]
+
+        for( product of product   ){
+            document.write('<div class="card" style="width: 18rem;">');
+            document.write(' <img src='+product.productPhoto+' class="card-img-top" alt="...">')
+            document.write('<div class="card-body">');
+            document.write('<h5 class="card-title">'+product.name+'</h5>');
+            document.write('<h6 class="card-subtitle mb-2 text-body-secondary">'+product.price+'</h6>');
+            document.write('<p class="card-text">'+product.id+'</p>');
+            document.write('</div>');
+            document.write('</div>');
+
+
+        }
+       
+
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

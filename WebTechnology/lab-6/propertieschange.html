@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1 id="h1" onmouseover="changecolor1()" onmouseout="changecolor()">
+        H1 element
+    </h1>
+    <button id="b1" onclick="changecolor2()"> button 1</button>
+    <button id="b2" onclick="changecolor3()"> button 2</button>
+    <button id="b3" onclick="changecolor4()"> button 3</button>
+    <script>
+        function changecolor1(){
+            var element=document.getElementById('h1');
+            body.style.backgroundColor= "black";
+            body.style.color= "white";        
+    }
+    function changecolor(){
+            var element=document.getElementById('h1');
+            body.style.backgroundColor= "white";
+            body.style.color= "black";        
+    }
+    function changecolor2(){
+            var element=document.getElementById('b1');
+            body.style.backgroundColor= "blue";
+            body.style.Color= "red";        
+    }
+    function changecolor3(){
+            var element=document.getElementById('b2');
+            body.style.backgroundColor= "green";
+            body.style.Color= "yellow";        
+    }
+    function changecolor4(){
+            var element=document.getElementById('b3');
+            body.style.backgroundColor= "fuchsia";
+            body.style.Color= "cyan";        
+    }
+
+    </script>
+</body>
+</html>

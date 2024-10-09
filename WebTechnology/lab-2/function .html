@@ -1,0 +1,15 @@
+function multiplyFirstDigitByItselfSecondDigitTimes(num) {
+  if (num < 10 || num > 99) {
+    throw new Error("Input must be a 2-digit number");
+  }
+
+  const firstDigit = Math.floor(num / 10);
+  const secondDigit = num % 10;
+
+  return firstDigit ** secondDigit;
+}
+
+// Example usage:
+const num = 25;
+const result = multiplyFirstDigitByItselfSecondDigitTimes(num);
+console.log(`The result is ${result}`); // Output: The result is 625

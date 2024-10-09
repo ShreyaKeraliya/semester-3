@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <button onclick="BG(BG1)">Change Background Color</button>
+    <script>
+    function BG(Color){
+        document.body.style.backgroundColor = "blue"; 
+        Color();
+    }
+    function BG1(){
+        color = document.body.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+        setTimeout(BG, 1000); 
+    }
+       
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number to Words</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <script>
+
+
+      let num = parseInt(prompt("enter number : "));
+      if(isNaN(num)){
+        document.write("not a number :")
+      }
+      if (num < 0 || num > 999) {
+        document.write("not in range")
+      }
+
+      const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+      const teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+      const tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+      const hundreds = ["", "one hundred", "two hundred", "three hundred", "four hundred", "five hundred", "six hundred", "seven hundred", "eight hundred", "nine hundred"];
+
+      let words = "";
+      if(num==0){
+        document.write("zero")
+      }
+
+      if (num >= 100) {
+        words += hundreds[Math.floor(num / 100)] + " ";
+        num %= 100;
+      }
+
+      if (num >= 20) {
+        words += tens[Math.floor(num / 10)] + " ";
+        num %= 10;
+      } else if (num >= 10) {
+        words += teens[num - 10] + " ";
+        num = 0;
+      }
+
+      if (num > 0) {
+        words += ones[num] + " ";
+      }
+
+     document.write(words);
+  </script>
+</body>
+</html>

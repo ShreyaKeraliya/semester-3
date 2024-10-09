@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("enter Array size "));
+        a = [n];
+        for(i=0;i<n;i++){
+            a[i]= prompt("enter Array");
+        }
+        min=a[0];
+        for(i=1;i<n;i++)
+        {
+           for(j=i+1;j<n;j++){
+            if(a[i]<a[j]){
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+                }
+           }
+
+        }
+        for(i=1;i<n;i++){
+            document.writeln(a[i]);
+        }
+    
+    
+    </script>
+    
+</body>
+</html>
