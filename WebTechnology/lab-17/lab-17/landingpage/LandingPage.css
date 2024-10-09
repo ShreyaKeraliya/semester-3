@@ -1,0 +1,98 @@
+#background{
+    background-image: url("I3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    text-align: left;
+}
+#Logo{
+    height: 40%;
+    width: 40%;
+    margin-left: 20px
+}
+#navbar{
+    background-color: rgba(0, 0, 0, 0.15);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+#navright{
+    margin-right: 10px;
+    display: inline;
+}
+#navleft{
+    display: inline;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    font-family: cursive;
+}
+
+#navbar a{
+    color: aliceblue;
+    padding: 14px 20px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+#navbar a:hover{
+    background-color :cornsilk ;
+    color: black;
+}
+#main{
+    margin-left: 200px;
+    margin-top: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: cursive;
+
+}
+#main1{
+
+}
+#search{
+    width: 200px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    color: black;
+    border: 0;
+    font-size: 50px;
+    margin-right: 10px;
+}
+#home{
+    margin-bottom: 20px;
+    margin-top: 20px;   
+    font-size: 24px;
+    height : 50%;
+    float: right;
+}
+#about{
+    margin-bottom: 20px;
+    margin-top: 20px;   
+    font-size: 24px;
+    font-weight: bold;
+    height : 50%;
+    float: left;
+}
+#services{
+    margin-bottom: 20px;
+    margin-top: 20px;   
+    font-size: 24px;
+    font-weight: bold;
+    height : 100px;
+    float: right;
+}
+#contact{
+    margin-bottom: 20px;
+    margin-top: 20px;   
+    font-size: 24px;
+    font-weight: bold;
+    height : 100px;
+    float: left;
+}

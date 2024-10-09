@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "name": "shreya",
+  "version": "2.0.0",
+  "description": "my init",
+  "main": "5page.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "hi"
+  },
+  "author": "ShreyaKeraliya",
+  "license": "ISC"
+}
